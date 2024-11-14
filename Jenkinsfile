@@ -21,7 +21,7 @@ pipeline {
 				}
 			}
 			steps {
-				bat 'copy target\\ear-example-0.0.1.ear C:\\Users\\virtual\\ambientes\\apache-tomee-plus-10.0.0-M3\\app\\'
+				bat 'copy target\\ear-example-0.0.1.ear C:\\Users\\virtual\\ambientes\\apache-tomee-plus-10.0.0-M3\\apps\\'
 			}
 		}
 	}
