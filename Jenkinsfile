@@ -5,7 +5,7 @@ pipeline {
 	}
 
 	parameters {
-		choice(name: 'DEPLOY_ENVIRONMENT', choices: ['ninguno', 'tomcat1', 'tomcat2'], description: 'Ambiente de despliegue')
+		choice(name: 'DEPLOY_ENVIRONMENT', choices: ['ninguno', 'tomee'], description: 'Ambiente de despliegue')
 	}
 
 	stages {
@@ -21,7 +21,7 @@ pipeline {
 				}
 			}
 			steps {
-				bat 'copy target\\ROOT.war C:\\Users\\virtual\\ambientes\\' + params.DEPLOY_ENVIRONMENT + '\\apache-tomcat-9.0.96\\webapps\\'
+				bat 'copy target\\ear-example-0.0.1.ear C:\\Users\\virtual\\ambientes\\apache-tomee-plus-10.0.0-M3\\app\\'
 			}
 		}
 	}
